@@ -4,6 +4,11 @@
 @import "cores";
 
 body {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    display: flex;
     margin: 0;
 
     .container {
@@ -26,22 +31,22 @@ body {
             text-shadow: none;
         }
 
-        h4 {
+        span {
             font-family: $fonte-padrao;
             text-align: start;
             color: #8a6d2f;
         }
 
-        #result {
-            text-align: center;
-            display: block;
-            margin-top: 30px;
-            font-family: $fonte-padrao;
-            background-color: gold;
-            border-radius: 30px;
-        }
+        // #result {
+        //     text-align: center;
+        //     display: block;
+        //     margin-top: 30px;
+        //     font-family: $fonte-padrao;
+        //     background-color: gold;
+        //     border-radius: 30px;
+        // }
 
-        #loan-form {
+        #form {
             color: #8a6d2f;
             font-size: 18px;
             font-weight: 300;
@@ -53,63 +58,22 @@ body {
                 width: 65%;
                 margin: 0 auto 15px auto;
 
-                input {
-                    text-align: right;
-                    font-family: $fonte-padrao;
-                    margin-left: auto;
-                }
-
-                select {
+                #hrs {
                     text-align: center;
-                    font-family: $fonte-padrao;
-                    margin-left: auto;
-
-                }
-
-                #loan-value {
                     width: 240px;
                     border-radius: 30px;
                     box-shadow: none;
                     background-color: grey;
                     color: white;
                 }
-
-                #loan-installments {
-                    width: 97px;
+                #sal {
+                    text-align: center;
+                    width: 120px;
                     border-radius: 30px;
                     box-shadow: none;
                     background-color: grey;
                     color: white;
                 }
-
-                #client-type {
-                    width: 50%;
-                    color: white;
-                    border-radius: 30px;
-                    box-shadow: none;
-                    background-color: gray;
-                }
-
-            }
-
-            #button-area {
-                text-align: center;
-                margin-top: 20px;
-                border-radius: 30px;
-
-            }
-
-            button {
-                width: 40%;
-                height: 30px;
-                margin-left: -1px;
-                border-top-right-radius: 2px;
-                border-bottom-right-radius: 2px;
-                background-color: #a8863d;
-                border: none;
-                border-radius: 5px;
-                padding: 5px 10px;
-                color: #fff;
             }
         }
     }
@@ -118,37 +82,36 @@ body {
 
 @media screen and (max-width: 720px) {
     #container {
-      width: 90%;
-      color: blueviolet;
+        width: 90%;
+        color: blueviolet;
     }
-  
+
     h1 {
-      font-size: 150%;
+        font-size: 150%;
     }
-  
+
     #loan-form {
-      width: 100%;
+        width: 100%;
     }
-  
+
     .form-input {
-      width: 100%;
-      flex-direction: column;
-      align-items: center;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
     }
-  
-    .form-input input, 
+
+    .form-input input,
     .form-input select {
-      margin: auto;
-      text-align: center;
-      font-size: 120%;
+        margin: auto;
+        text-align: center;
+        font-size: 120%;
     }
-  
+
     .form-input label,
     #button-area button,
     #result {
-      font-size: 120%;
+        font-size: 120%;
     }
-  
-  
-  }
-  
+
+
+}

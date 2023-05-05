@@ -1,44 +1,53 @@
-describe("Suítes de teste para validar o salário a receber seguindo as regras demonstradas acima", function () {
-    const $ = document.querySelector.bind(document)
+const calculaValorPorHora = require('./../src/calculaValorPorHora');
 
-const calculateResult = (event) => {
-  event.preventDefault()
+describe('Testes sobre a calculadora salarial', () => {
+  it('deve calcular o valor em reais ganho por horas trabalhadas', () => {
+    const horasRegularesTrabalhadas = 44;
+    const valorSalarioMinimo = 1320;
+    
+    const [valorPorHora] = calculaValorPorHora(horasRegularesTrabalhadas, valorSalarioMinimo);
+    
+    expect(valorPorHora).toBe(6);
+  });
 
-  const loanValue = convertStringToFloat('loan-value')
-  const loanInstallments = convertStringToFloat('loan-installments')
-  const pisos = convertStringToFloat('client-type')
+  it('deve calcular o valor em reais ganho por horas extra trabalhadas', () => {
+    const horasRegularesTrabalhadas = 44;
+    const valorSalarioMinimo = 1320;
+    
+    const [, valorPorHoraExtra] = calculaValorPorHora(horasRegularesTrabalhadas, valorSalarioMinimo);
+    
+    expect(valorPorHoraExtra).toBe(9);
+  });
 
-  const installmentValue = calculateInstallmentValue(loanValue, pisos, loanInstallments)
+  it('não deve efetuar o cálculo caso o número de horas trabalhadas seja nulo ou inválido', () => {
+    const horasRegularesTrabalhadas = 'horas';
+    const valorSalarioMinimo = 1320;
+    
+    expect(() => calculaValorPorHora(horasRegularesTrabalhadas, valorSalarioMinimo))
+      .toThrowError('O valor de horas trabalhadas precisa ser um número.');
+  });
 
-  $('#result').innerText = `Valor da pisos: R$ ${installmentValue.toFixed(2)}`
-}
+  it('não deve efetuar o cálculo caso o valor do salário mínimo seja nulo ou inválido', () => {
+    const horasRegularesTrabalhadas = 44;
+    const valorSalarioMinimo = 'salario';
+    
+    expect(() => calculaValorPorHora(horasRegularesTrabalhadas, valorSalarioMinimo))
+      .toThrowError('O valor do salário mínimo precisa ser um número.');
+  });
 
-/**
- * Gets the value of a HTML input and converts it to a float number
- * @param {string} id An id from a HTML input without the hash
- * @returns The value of the input converted to a float number
- */
-const convertStringToFloat = (id) => {
-  let aux = $(`#${id}`).value
-  const value = parseFloat(aux)
-  return value
-}
+  it('não deve efetuar o cálculo caso o número de horas trabalhadas seja neutro ou negativo', () => {
+    const horasRegularesTrabalhadas = -44;
+    const valorSalarioMinimo = 1320;
+    
+    expect(() => calculaValorPorHora(horasRegularesTrabalhadas, valorSalarioMinimo))
+      .toThrowError('O valor de horas trabalhadas precisa ser um número positivo.');
+  });
 
-/**
- * Calculates the installment value of the final loan value
- * @param {number} loanValue The loan's value
- * @param {number} pisos The tax pisos to be applied to the loan
- * @param {number} loanInstallments The amount of installments of the loan
- * @returns The installment value of the final loan value as a float number
- */
-const calculateInstallmentValue = (loanValue, pisos, loanInstallments) => {
-  const finalLoanValue = loanValue * (1 + ((pisos / 35) * loanInstallments))
-  const installmentValue = finalLoanValue / loanInstallments
-  return installmentValue
-}
-    it("deve validar o valor do salário visando o total de horas mensais", function(){});
-    it("deve validar o salário somando a hora extra trabalhada", function(){});
-	it("deve validar o salário o  bruto", function(){});
-	it("deve validar o salário total a receber por horas extras", function(){});
-    it("deve validar o salário a receber  equivalente ao salário bruto + quantia a receber por horas extras", function{});
+  it('não deve efetuar o cálculo caso o valor do salário mínimo seja neutro ou negativo', () => {
+    const horasRegularesTrabalhadas = 44;
+    const valorSalarioMinimo = -1320;
+    
+    expect(() => calculaValorPorHora(horasRegularesTrabalhadas, valorSalarioMinimo))
+      .toThrowError('O valor do salário mínimo precisa ser um número positivo.');
+  });
 });

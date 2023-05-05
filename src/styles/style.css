@@ -3,6 +3,11 @@
   src: url(../fonts/Raleway-Regular.ttf);
 }
 body {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  display: flex;
   margin: 0;
 }
 body .container {
@@ -24,78 +29,38 @@ body .container h1 {
   letter-spacing: 0px;
   text-shadow: none;
 }
-body .container h4 {
+body .container span {
   font-family: "padrao";
   text-align: start;
   color: #8a6d2f;
 }
-body .container #result {
-  text-align: center;
-  display: block;
-  margin-top: 30px;
-  font-family: "padrao";
-  background-color: gold;
-  border-radius: 30px;
-}
-body .container #loan-form {
+body .container #form {
   color: #8a6d2f;
   font-size: 18px;
   font-weight: 300;
   margin: auto;
   width: 60%;
 }
-body .container #loan-form .form-input {
+body .container #form .form-input {
   display: flex;
   width: 65%;
   margin: 0 auto 15px auto;
 }
-body .container #loan-form .form-input input {
-  text-align: right;
-  font-family: "padrao";
-  margin-left: auto;
-}
-body .container #loan-form .form-input select {
+body .container #form .form-input #hrs {
   text-align: center;
-  font-family: "padrao";
-  margin-left: auto;
-}
-body .container #loan-form .form-input #loan-value {
   width: 240px;
   border-radius: 30px;
   box-shadow: none;
   background-color: grey;
   color: white;
 }
-body .container #loan-form .form-input #loan-installments {
-  width: 97px;
+body .container #form .form-input #sal {
+  text-align: center;
+  width: 120px;
   border-radius: 30px;
   box-shadow: none;
   background-color: grey;
   color: white;
-}
-body .container #loan-form .form-input #client-type {
-  width: 50%;
-  color: white;
-  border-radius: 30px;
-  box-shadow: none;
-  background-color: gray;
-}
-body .container #loan-form #button-area {
-  text-align: center;
-  margin-top: 20px;
-  border-radius: 30px;
-}
-body .container #loan-form button {
-  width: 40%;
-  height: 30px;
-  margin-left: -1px;
-  border-top-right-radius: 2px;
-  border-bottom-right-radius: 2px;
-  background-color: #a8863d;
-  border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
-  color: #fff;
 }
 
 @media screen and (max-width: 720px) {

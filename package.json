@@ -1,0 +1,16 @@
+{
+  "name": "salario-pre-prova",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/DIEG0FERNANDES/salario-pre-prova.git",
+  "author": "Diego_dos_Santos_Fernandes <cookieezito@hotmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "http-server",
+    "test": "jasmine --config=jasmine.json"
+  },
+  "dependencies": {
+    "http-server": "^14.1.1",
+    "jasmine": "^4.6.0"
+  }
+}
