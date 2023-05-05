@@ -1,4 +1,5 @@
-const $ = document.querySelector.bind(document)
+describe("Suítes de teste para validar o salário a receber seguindo as regras demonstradas acima", function () {
+    const $ = document.querySelector.bind(document)
 
 const calculateResult = (event) => {
   event.preventDefault()
@@ -35,7 +36,6 @@ const calculateInstallmentValue = (loanValue, pisos, loanInstallments) => {
   const installmentValue = finalLoanValue / loanInstallments
   return installmentValue
 }
-describe("Suítes de teste para validar o salário a receber seguindo as regras demonstradas acima", function () {
     it("deve validar o valor do salário visando o total de horas mensais", function(){});
     it("deve validar o salário somando a hora extra trabalhada", function(){});
 	it("deve validar o salário o  bruto", function(){});

@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "padrao";
+  src: url(../fonts/Raleway-Regular.ttf);
+}
 body {
   margin: 0;
 }
@@ -6,11 +10,11 @@ body .container {
   margin: 20px auto;
   padding: 20px;
   background-color: #fac960;
-  font-family: "regular";
+  font-family: "padrao";
   text-align: center;
 }
 body .container h1 {
-  font-family: "Courier New", Courier, monospace;
+  font-family: "padrao";
   margin: 10px 0px;
   color: #8a6d2f;
   font-size: 44px;
@@ -21,27 +25,24 @@ body .container h1 {
   text-shadow: none;
 }
 body .container h4 {
+  font-family: "padrao";
   text-align: start;
+  color: #8a6d2f;
 }
 body .container #result {
   text-align: center;
   display: block;
   margin-top: 30px;
-  font-family: "title";
+  font-family: "padrao";
   background-color: gold;
   border-radius: 30px;
 }
 body .container #loan-form {
+  color: #8a6d2f;
+  font-size: 18px;
+  font-weight: 300;
   margin: auto;
   width: 60%;
-}
-body .container #loan-form button {
-  color: rgb(173, 201, 16);
-  font-family: "title";
-  background-color: rgb(170, 17, 17);
-  border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
 }
 body .container #loan-form .form-input {
   display: flex;
@@ -50,12 +51,12 @@ body .container #loan-form .form-input {
 }
 body .container #loan-form .form-input input {
   text-align: right;
-  font-family: "regular";
+  font-family: "padrao";
   margin-left: auto;
 }
 body .container #loan-form .form-input select {
   text-align: center;
-  font-family: "regular";
+  font-family: "padrao";
   margin-left: auto;
 }
 body .container #loan-form .form-input #loan-value {
@@ -63,18 +64,18 @@ body .container #loan-form .form-input #loan-value {
   border-radius: 30px;
   box-shadow: none;
   background-color: grey;
-  color: blue;
+  color: white;
 }
 body .container #loan-form .form-input #loan-installments {
   width: 97px;
   border-radius: 30px;
   box-shadow: none;
   background-color: grey;
-  color: blue;
+  color: white;
 }
 body .container #loan-form .form-input #client-type {
   width: 50%;
-  color: blue;
+  color: white;
   border-radius: 30px;
   box-shadow: none;
   background-color: gray;
@@ -82,16 +83,48 @@ body .container #loan-form .form-input #client-type {
 body .container #loan-form #button-area {
   text-align: center;
   margin-top: 20px;
-  background-color: rgb(5, 233, 202);
   border-radius: 30px;
 }
 body .container #loan-form button {
-  color: rgb(173, 201, 16);
-  font-family: "title";
-  background-color: rgb(170, 17, 17);
+  width: 40%;
+  height: 30px;
+  margin-left: -1px;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #a8863d;
   border: none;
   border-radius: 5px;
   padding: 5px 10px;
+  color: #fff;
+}
+
+@media screen and (max-width: 720px) {
+  #container {
+    width: 90%;
+    color: blueviolet;
+  }
+  h1 {
+    font-size: 150%;
+  }
+  #loan-form {
+    width: 100%;
+  }
+  .form-input {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .form-input input,
+  .form-input select {
+    margin: auto;
+    text-align: center;
+    font-size: 120%;
+  }
+  .form-input label,
+  #button-area button,
+  #result {
+    font-size: 120%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
