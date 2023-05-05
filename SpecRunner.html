@@ -5,30 +5,53 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="src/styles/style.css">
-  <title>preProvaEngenhariaDeSoftware</title>
+  <link rel="stylesheet" href="./src/styles/style.css">
+  <title>Salário Pré Prova</title>
 </head>
 
 <body>
-  <h1>Pre Prova Estilizada</h1>
-  <div class="regras">
-    <h1>Regras a serem seguidas:</h1>
-    <script src="src/spec/preProvaSpec.js"></script>
+  <div class="container">
+    <h1>PRÉ-PROVA DE ENGENHARIA DE SOFTWARE II</h1>
+    <div class="regras">
+      <h1>O QUE DEVE SER FEITO:</h1>
+      <h4>
+        Faça um programa que receba o número de horas trabalhadas, o valor do salário mínimo e o número de horas extras
+        trabalhadas. Calcule e mostre o salário a receber seguindo as regras a abaixo:
+        <br>
+        a hora trabalhada vale valor do salário mínimo/total de horas mensais (normalmente é 44 horas semanais);
+        a hora extra vale 1.5 da hora trabalhada;
+        o salário bruto equivale ao número de horas trabalhadas multiplicado pelo valor da hora trabalhada;
+        a quantia a receber pelas horas extras equivale ao número de horas extras trabalhadas multiplicado pelo valor da
+        hora extra;
+        o salário a receber equivale ao salário bruto mais a quantia a receber pelas horas extras.
+      </h4>
+    </div>
+    <form id="loan-form" onsubmit="calculateResult(event)">
+      <div class="form-input">
+        <label for="loan-value">Salário:</label>
+        <input type="number" id="loan-value" min="35" step="0.01" required>
+      </div>
+      <div class="form-input">
+        <label for="loan-installments">Quantidade de Piso:</label>
+        <input type="number" id="loan-installments" min="1" step="1" required>
+      </div>
+      <div class="form-input">
+        <label for="client-type">Tipo de pisos:</label>
+        <select id="client-type">
+          <option value="35 o m²">cerâmica</option>
+          <option value="125 o m²">parcelanato</option>
+          <option value="330 o m²">madeira</option>
+        </select>
+      </div>
+      <div id="button-area">
+        <button>Calcular preço do pisos</button>
+      </div>
+    </form>
+
+    <span src="result"></span>
   </div>
-  <p>O que deve ser feito:
-    <br>
-    Faça um programa que receba o número de horas trabalhadas, o valor do salário mínimo e o número de horas extras
-    trabalhadas. Calcule e mostre o salário a receber seguindo as regras a abaixo:
-    <br>
-    a hora trabalhada vale valor do salário mínimo/total de horas mensais (normalmente é 44 horas semanais);
-    a hora extra vale 1.5 da hora trabalhada;
-    o salário bruto equivale ao número de horas trabalhadas multiplicado pelo valor da hora trabalhada;
-    a quantia a receber pelas horas extras equivale ao número de horas extras trabalhadas multiplicado pelo valor da
-    hora extra;
-    o salário a receber equivale ao salário bruto mais a quantia a receber pelas horas extras.
 
-  </p>
-
+  <script src="src/spec/preProvaSpec.js"></script>
 </body>
 
 </html>

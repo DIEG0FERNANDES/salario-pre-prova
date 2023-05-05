@@ -1,5 +1,97 @@
-body h1 {
-  background-color: red;
+body {
+  margin: 0;
+}
+body .container {
+  width: 60%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fac960;
+  font-family: "regular";
+  text-align: center;
+}
+body .container h1 {
+  font-family: "Courier New", Courier, monospace;
+  margin: 10px 0px;
+  color: #8a6d2f;
+  font-size: 44px;
+  line-height: 54px;
+  font-style: normal;
+  font-weight: 300;
+  letter-spacing: 0px;
+  text-shadow: none;
+}
+body .container h4 {
+  text-align: start;
+}
+body .container #result {
+  text-align: center;
+  display: block;
+  margin-top: 30px;
+  font-family: "title";
+  background-color: gold;
+  border-radius: 30px;
+}
+body .container #loan-form {
+  margin: auto;
+  width: 60%;
+}
+body .container #loan-form button {
+  color: rgb(173, 201, 16);
+  font-family: "title";
+  background-color: rgb(170, 17, 17);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+body .container #loan-form .form-input {
+  display: flex;
+  width: 65%;
+  margin: 0 auto 15px auto;
+}
+body .container #loan-form .form-input input {
+  text-align: right;
+  font-family: "regular";
+  margin-left: auto;
+}
+body .container #loan-form .form-input select {
+  text-align: center;
+  font-family: "regular";
+  margin-left: auto;
+}
+body .container #loan-form .form-input #loan-value {
+  width: 240px;
+  border-radius: 30px;
+  box-shadow: none;
+  background-color: grey;
+  color: blue;
+}
+body .container #loan-form .form-input #loan-installments {
+  width: 97px;
+  border-radius: 30px;
+  box-shadow: none;
+  background-color: grey;
+  color: blue;
+}
+body .container #loan-form .form-input #client-type {
+  width: 50%;
+  color: blue;
+  border-radius: 30px;
+  box-shadow: none;
+  background-color: gray;
+}
+body .container #loan-form #button-area {
+  text-align: center;
+  margin-top: 20px;
+  background-color: rgb(5, 233, 202);
+  border-radius: 30px;
+}
+body .container #loan-form button {
+  color: rgb(173, 201, 16);
+  font-family: "title";
+  background-color: rgb(170, 17, 17);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,113 @@
-body{
-    h1{
-        background-color: red;
+body {
+    margin: 0;
+
+    .container {
+        width: 60%;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fac960;
+        font-family: "regular";
+        text-align: center;
+
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 10px 0px;
+            color: #8a6d2f;
+            font-size: 44px;
+            line-height: 54px;
+            font-style: normal;
+            font-weight: 300;
+            letter-spacing: 0px;
+            text-shadow: none;
+        }
+
+        h4 {
+            text-align: start;
+        }
+
+        #result {
+            text-align: center;
+            display: block;
+            margin-top: 30px;
+            font-family: "title";
+            background-color: gold;
+            border-radius: 30px;
+        }
+
+        #loan-form {
+            margin: auto;
+            width: 60%;
+
+            button {
+                color: rgb(173, 201, 16);
+                font-family: "title";
+                background-color: rgb(170, 17, 17);
+                border: none;
+                border-radius: 5px;
+                padding: 5px 10px;
+            }
+
+            .form-input {
+                display: flex;
+                width: 65%;
+                margin: 0 auto 15px auto;
+
+                input {
+                    text-align: right;
+                    font-family: "regular";
+                    margin-left: auto;
+                }
+
+                select {
+                    text-align: center;
+                    font-family: "regular";
+                    margin-left: auto;
+
+                }
+
+                #loan-value {
+                    width: 240px;
+                    border-radius: 30px;
+                    box-shadow: none;
+                    background-color: grey;
+                    color: blue;
+                }
+
+                #loan-installments {
+                    width: 97px;
+                    border-radius: 30px;
+                    box-shadow: none;
+                    background-color: grey;
+                    color: blue;
+                }
+
+                #client-type {
+                    width: 50%;
+                    color: blue;
+                    border-radius: 30px;
+                    box-shadow: none;
+                    background-color: gray;
+                }
+
+            }
+
+            #button-area {
+                text-align: center;
+                margin-top: 20px;
+                background-color: rgb(5, 233, 202);
+                border-radius: 30px;
+
+            }
+
+            button {
+                color: rgb(173, 201, 16);
+                font-family: "title";
+                background-color: rgb(170, 17, 17);
+                border: none;
+                border-radius: 5px;
+                padding: 5px 10px;
+            }
+        }
     }
+
 }
