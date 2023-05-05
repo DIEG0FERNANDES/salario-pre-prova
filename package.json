@@ -7,10 +7,12 @@
   "license": "MIT",
   "scripts": {
     "start": "http-server",
-    "test": "jasmine --config=jasmine.json"
+    "test": "jasmine --config=jasmine.json",
+    "jas": "serve SpecRunner.html"
   },
   "dependencies": {
     "http-server": "^14.1.1",
-    "jasmine": "^4.6.0"
+    "jasmine": "^4.6.0",
+    "serve": "^14.2.0"
   }
 }
