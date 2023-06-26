@@ -8,7 +8,7 @@
   "scripts": {
     "start": "http-server",
     "test": "jasmine --config=jasmine.json",
-    "jas": "serve SpecRunner.html"
+    "jas": "http-serve SpecRunner.html"
   },
   "dependencies": {
     "http-server": "^14.1.1",

@@ -1,4 +1,4 @@
-const calcPorHora = require('./../src/js/calculo');
+const calculaValorPorHora = require('./../src/js/calculo');
 
 describe('Testes sobre a calculadora salarial', () => {
   it('deve calcular o valor em reais ganho por horas trabalhadas', () => {

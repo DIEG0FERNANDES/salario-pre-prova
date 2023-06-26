@@ -11,15 +11,15 @@ function calculaValorPorHora(horasTrabalhadas = 44, valorSalarioMinimo = 1320) {
   if (typeof horasTrabalhadas !== 'number') {
     throw new Error('O valor de horas trabalhadas precisa ser um número.');
   }
-
+  
   if (typeof valorSalarioMinimo !== 'number') {
     throw new Error('O valor do salário mínimo precisa ser um número.');
   }
-
+  
   if (horasTrabalhadas <= 0) {
     throw new Error('O valor de horas trabalhadas precisa ser um número positivo.');
   }
-
+  
   if (valorSalarioMinimo <= 0) {
     throw new Error('O valor do salário mínimo precisa ser um número positivo.');
   }
